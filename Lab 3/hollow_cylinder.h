@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "shape3d.h"
 #include "math_consts.h"
 
@@ -9,6 +10,12 @@ public:
 	hollow_cylinder(T a, T b, T c) : shape3d<T>(a, b, c)
 	{
 		this->_name = "Cylinder";
+
+		if (a < b)
+		{
+			std::cerr << "In cylinder outer radius less then inner radius" << std::endl;
+			exit(1);
+		}
 	}
 
 	virtual T get_area() const override;
