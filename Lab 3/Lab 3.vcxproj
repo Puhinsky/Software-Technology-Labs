@@ -127,12 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="hollow_cylinder.h" />
+    <ClInclude Include="math_consts.h" />
     <ClInclude Include="parallelepiped.h" />
+    <ClInclude Include="regular_triangular_pyramid.h" />
     <ClInclude Include="shape3d.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="hollow_cylinder.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="parallelepiped.cpp" />
+    <ClCompile Include="regular_triangular_pyramid.cpp" />
     <ClCompile Include="shape3d.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

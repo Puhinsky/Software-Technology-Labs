@@ -21,6 +21,15 @@
     <ClInclude Include="parallelepiped.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="regular_triangular_pyramid.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="hollow_cylinder.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="math_consts.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shape3d.cpp">
@@ -30,6 +39,12 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="parallelepiped.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="regular_triangular_pyramid.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="hollow_cylinder.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
