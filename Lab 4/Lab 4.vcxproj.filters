@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="first_entry_finder.h">
+    <ClInclude Include="entry_predicate.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

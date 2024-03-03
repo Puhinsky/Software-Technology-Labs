@@ -1,5 +1,5 @@
 #include <vector>
-#include "first_entry_finder.h"
+#include "entry_predicate.h"
 #include <iostream>
 
 using namespace::std;
@@ -19,8 +19,7 @@ int main()
 template<class T>
 void find_entry(const T& element, const vector<T>& vector)
 {
-	auto predicate = entry_predicate<T>(element);
-	auto iterator = find_if(vector.begin(), vector.end(), predicate);
+	auto iterator = find_if(vector.begin(), vector.end(), entry_predicate<char>(element));
 
 	if (iterator != vector.end())
 	{
