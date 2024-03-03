@@ -5,9 +5,9 @@ template<class T>
 class entry_predicate
 {
 private:
-	const T& _target;
+	T _target;
 public:
-	entry_predicate(const T& target) : _target(target) {}
+	entry_predicate(T target) : _target(target) {}
 	bool operator()(const T& element) const;
 };
 
