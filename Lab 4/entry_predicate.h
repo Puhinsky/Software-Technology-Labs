@@ -1,6 +1,6 @@
 #pragma once
 #include <functional>
-
+//<mark> usign inherit from unary/binary function for stl but it is deprecated and working without
 template<class T>
 class entry_predicate
 {

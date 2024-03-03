@@ -46,6 +46,9 @@ vector<int> task_with_functor(const vector<int>& numbers)
 
 	for_each(numbers.begin(), numbers.end(), palindrome_predicate<int>(palindromes));
 
+	//<mark> singleton vector for many functions
+	for_each(numbers.begin(), numbers.end(), palindrome_predicate<int>(palindromes));
+
 	return palindromes;
 }
 

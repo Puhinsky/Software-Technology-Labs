@@ -6,6 +6,7 @@ private:
 	std::vector<T>& _palindromes;
 
 public:
+	//<mark> explicit modificator
 	palindrome_predicate(std::vector<T>& palindromes) : _palindromes(palindromes) {}
 
 	void operator()(T number);
