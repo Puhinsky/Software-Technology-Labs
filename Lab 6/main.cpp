@@ -1,11 +1,14 @@
 #include <iostream>
 #include "queue.h"
+#include "store.h"
 
 void queue_test();
+void store_test();
 
 int main()
 {
 	queue_test();
+	store_test();
 
 	return 0;
 }
@@ -23,5 +26,18 @@ void queue_test()
 		std::cout << "Front element: " << queue.pop_front() << std::endl;
 	}
 
-	queue.pop_front();
+	//queue.pop_front();
+}
+
+void store_test()
+{
+	store store;
+
+	auto apple = store.add("Apple", 1.0, 60);
+	auto banana = store.add("Banana", 0.5, 40);
+	auto orange = store.add("Orange", 0.8, 100);
+
+	make_promotion(apple, banana, 20);
+
+	store.print(std::cout);
 }

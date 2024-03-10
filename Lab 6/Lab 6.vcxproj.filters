@@ -21,9 +21,15 @@
     <ClCompile Include="queue.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="store.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="queue.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="store.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
