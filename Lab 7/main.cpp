@@ -9,10 +9,6 @@ constexpr auto NUMBERS_COUNT = 23;
 constexpr auto START_VALUE = 12;
 constexpr auto PARITY = 3;
 
-constexpr auto INITIAL_X = 1;
-constexpr auto INITIAL_Y = 6;
-constexpr auto INITIAL_Z = 4;
-
 void iota_test();
 void positions();
 
@@ -49,28 +45,27 @@ void iota_test()
 
 void positions()
 {
-	vector<int> initial(3);
+	int initial_x;
+	int initial_y;
+	int initial_z;
 	cout << "initial (X Y Z): ";
-	cin >> initial[0] >> initial[1] >> initial[2];
+	cin >> initial_x >> initial_y >> initial_z;
 
 	vector<int> delta_x = { -1, 10, -15, 5 };
 	vector<int> delta_y = { 5, -8, 20, -3 };
 	vector<int> delta_z = { 3, -4, 12, -9 };
 
-	std::vector<std::vector<int>> absolute;
+	vector<int> absolute_x(delta_x.size());
+	vector<int> absolute_y(delta_x.size());
+	vector<int> absolute_z(delta_x.size());
 
-	int x = initial[0];
-	int y = initial[1];
-	int z = initial[2];
+	partial_sum(delta_x.begin(), delta_x.end(), absolute_x.begin(), [&](int a, int b) { return a + b + initial_x; });
+	partial_sum(delta_y.begin(), delta_y.end(), absolute_y.begin(), [&](int a, int b) { return a + b + initial_y; });
+	partial_sum(delta_z.begin(), delta_z.end(), absolute_z.begin(), [&](int a, int b) { return a + b + initial_z; });
 
-	std::transform(delta_x.begin(), delta_x.end(), delta_y.begin(), delta_z.begin(), std::back_inserter(absolute),
-		[&](int dx, int dy, int dz) -> std::vector<int>
-		{
-			x += dx;
-			y += dy;
-			z += dz;
-			return std::vector<int>{x, y, z};
-		});//mb partial_sum
+	print_vector(absolute_x, "X");
+	print_vector(absolute_y, "Y");
+	print_vector(absolute_z, "Z");
 }
 
 template<typename T>
